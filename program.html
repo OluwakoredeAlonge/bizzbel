@@ -20,6 +20,7 @@
             --accent-color: #FFD700;
             --overlay-bg: rgba(0, 0, 0, 0.5);
             --hero-text: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.2);
         }
 
         [data-theme="dark"] {
@@ -31,6 +32,7 @@
             --accent-color: #FFCA28;
             --overlay-bg: rgba(0, 0, 0, 0.7);
             --hero-text: #F5F5F5;
+            --shadow-color: rgba(255, 255, 255, 0.2);
         }
 
         html, body {
@@ -52,7 +54,7 @@
             background: linear-gradient(135deg, var(--background-color), #2E2E2E);
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h5 {
             font-family: 'Montserrat', sans-serif;
             color: var(--primary-color);
         }
@@ -285,6 +287,129 @@
             box-shadow: 0 4px 15px var(--shadow-color);
         }
 
+        .modal-content {
+            background-color: var(--white);
+            color: var(--text-color);
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 4px 20px var(--shadow-color);
+        }
+
+        [data-theme="dark"] .modal-content {
+            background-color: var(--white);
+            color: var(--text-color);
+        }
+
+        .modal-header {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: var(--hero-text);
+            border-bottom: none;
+            padding: 1.5rem;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .modal-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-body form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .modal-body .form-group {
+            margin-bottom: 0;
+        }
+
+        .modal-body label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .modal-body .form-control,
+        .modal-body .form-select {
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid var(--background-color);
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        [data-theme="dark"] .modal-body .form-control,
+        [data-theme="dark"] .modal-body .form-select {
+            background-color: #2A2A2A;
+            border-color: #3A3A3A;
+            color: var(--text-color);
+        }
+
+        .modal-body .form-control:focus,
+        .modal-body .form-select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 5px rgba(0, 168, 107, 0.5);
+        }
+
+        .modal-body .form-control::placeholder {
+            color: #6c757d;
+            opacity: 0.7;
+        }
+
+        [data-theme="dark"] .modal-body .form-control::placeholder {
+            color: #adb5bd;
+        }
+
+        .modal-footer {
+            border-top: none;
+            padding: 1.5rem;
+            background-color: var(--white);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        [data-theme="dark"] .modal-footer {
+            background-color: var(--white);
+        }
+
+        .modal-footer .btn-secondary {
+            background: var(--background-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .modal-footer .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .modal-footer .btn-primary {
+            background: linear-gradient(90deg, var(--secondary-color), #00C4B4);
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .modal-footer .btn-primary:hover {
+            background: linear-gradient(90deg, #008B5B, #00A86B);
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px var(--shadow-color);
+        }
+
         .footer {
             position: relative;
             background: linear-gradient(90deg, var(--primary-color), #0044B4);
@@ -457,7 +582,7 @@
         @media (max-width: 768px) {
             .navbar {
                 background-color: var(--primary-color);
-                position: fixed; /* Fixed for small devices to avoid overlap */
+                position: fixed;
             }
 
             .navbar-brand img {
@@ -493,6 +618,15 @@
 
             .content-section {
                 padding: 1.5rem 0;
+            }
+
+            .modal-dialog {
+                margin: 1rem;
+            }
+
+            .modal-body .form-control,
+            .modal-body .form-select {
+                font-size: 0.9rem;
             }
 
             .footer-detailed .container {
@@ -552,6 +686,27 @@
 
             .content-section li {
                 font-size: 1rem;
+            }
+
+            .modal-dialog {
+                margin: 0.5rem;
+            }
+
+            .modal-body .form-control,
+            .modal-body .form-select {
+                font-size: 0.85rem;
+            }
+
+            .modal-header {
+                padding: 1rem;
+            }
+
+            .modal-body {
+                padding: 1.5rem;
+            }
+
+            .modal-footer {
+                padding: 1rem;
             }
 
             .footer-detailed .container {
@@ -659,9 +814,57 @@
         <div class="container">
             <h2>Ready to Elevate Your Skills?</h2>
             <p>Contact us today to register for our Instructor-led Learning Programmes and take the next step toward professional excellence.</p>
-            <a href="contact.html" class="btn" aria-label="Register for Instructor-led Learning Programmes">Register Now</a>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#registerModal" aria-label="Register for Instructor-led Learning Programmes">Register Now</button>
         </div>
     </section>
+
+    <!-- Registration Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Register for a Programme</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span style="color: #dc3545;">*</span></label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address <span style="color: #dc3545;">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span style="color: #dc3545;">*</span></label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" class="form-control" id="jobTitle" name="jobTitle" placeholder="Enter your job title">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" class="form-control" id="company" name="company" placeholder="Enter your company name">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service <span style="color: #dc3545;">*</span></label>
+                            <select class="form-select" id="service" name="service" required>
+                                <option value="Instructor-led Learning Programmes" selected>Instructor-led Learning Programmes</option>
+                                <option value="International Study-Tours">International Study-Tours</option>
+                                <option value="Custom Training">Custom Training</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="registrationForm" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-simple container">
@@ -749,6 +952,24 @@
         });
         closeFooter.addEventListener('click', () => {
             footerDetailed.style.display = 'none';
+        });
+
+        // Handle form submission
+        document.getElementById('registrationForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = {
+                fullName: formData.get('fullName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                jobTitle: formData.get('jobTitle'),
+                company: formData.get('company'),
+                service: formData.get('service')
+            };
+            console.log('Registration Data:', data);
+            alert('Registration submitted successfully! Check console for details.');
+            e.target.reset();
+            bootstrap.Modal.getInstance(document.getElementById('registerModal')).hide();
         });
     </script>
 </body>
