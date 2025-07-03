@@ -775,36 +775,57 @@
             }
         }
 
-        @media (max-width: 576px) {
-            .navbar-brand img {
-                width: 80px;
-            }
-
-            .offcanvas-title img {
-                width: 100px;
-            }
-
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-detailed .container {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-simple {
-                flex-direction: column;
-                gap: 0.5rem;
-                align-items: center;
-            }
-
-            .footer-simple p,
-            .footer-simple a {
-                width: 100%;
-                text-align: center;
-                margin: 0;
-            }
-        }
+    @media (max-width: 576px) {
+    .navbar {
+        background-color: var(--primary-color);
+        padding: 0.5rem 0; /* Reduce navbar padding to minimize overlap */
+    }
+    .navbar-brand img {
+        width: 80px;
+    }
+    .offcanvas-title img {
+        width: 100px;
+    }
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-banner {
+        height: 400px;
+        display: flex;
+        align-items: center; /* Ensure vertical centering */
+    }
+    .hero-content {
+        padding: 4.5rem 1rem 1rem; /* Increase top padding to clear navbar */
+        max-width: 90%; /* Prevent text clipping */
+        text-align: center;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem; /* Slightly smaller than 2rem for better fit */
+        line-height: 1.2; /* Improve readability */
+        margin-bottom: 0.8rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem; /* Adjust for smaller screens */
+    }
+    .hero-content .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .footer-detailed .container {
+        grid-template-columns: 1fr;
+    }
+    .footer-simple {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    .footer-simple p,
+    .footer-simple a {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+}
     </style>
 </head>
 
