@@ -89,7 +89,7 @@
             position: relative;
             z-index: 2;
             max-width: 800px;
-            padding: 2rem;
+            padding: 3rem 2rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -457,6 +457,7 @@
         @media (max-width: 768px) {
             .navbar {
                 background-color: var(--primary-color);
+                position: fixed; /* Fixed for small devices to avoid overlap */
             }
 
             .navbar-brand img {
@@ -464,12 +465,12 @@
             }
 
             .hero-banner {
-                height: 400px;
+                height: 500px;
             }
 
             .hero-content {
-                padding: 1.5rem;
-                min-height: 200px;
+                padding: 4rem 1.5rem 1.5rem;
+                min-height: 300px;
             }
 
             .hero-content h1 {
@@ -487,7 +488,7 @@
             }
 
             .section h2 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
 
             .content-section {
@@ -513,9 +514,13 @@
                 width: 100px;
             }
 
+            .hero-banner {
+                height: 600px;
+            }
+
             .hero-content {
-                padding: 1rem;
-                min-height: 180px;
+                padding: 5rem 1rem 1rem;
+                min-height: 400px;
             }
 
             .hero-content h1 {
@@ -526,6 +531,19 @@
             .hero-content p {
                 font-size: 0.85rem;
                 line-height: 1.4;
+            }
+
+            .hero-overlay {
+                background: var(--overlay-bg);
+                opacity: 0.6;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
             }
 
             .content-section {
