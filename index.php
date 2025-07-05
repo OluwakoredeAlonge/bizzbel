@@ -864,7 +864,7 @@
     <section class="hero-banner">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="assets/logo.webp"
+                <a class="navbar-brand" href="index.php"><img src="assets/logo.webp"
                         alt="Bizzbel Data Intelligence Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
@@ -873,7 +873,7 @@
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvas"
                     aria-labelledby="navbarOffcanvasLabel">
                     <div class="offcanvas-header">
-                        <a class="offcanvas-title" id="navbarOffcanvasLabel" href="index.html"><img
+                        <a class="offcanvas-title" id="navbarOffcanvasLabel" href="index.php"><img
                                 src="assets/logo.webp" alt="Bizzbel Data Intelligence Logo"></a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -892,13 +892,13 @@
                                     <li><a class="dropdown-item" href="#">Custom Training</a></li>
                                 </ul>
                             </li> -->
-                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i
+                            <li class="nav-item"><a class="nav-link" href="aboutus.php"><i
                                         class="fas fa-info-circle"></i>
                                     About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="program.html"><i
+                            <li class="nav-item"><a class="nav-link" href="program.php"><i
                                         class="fas fa-graduation-cap"></i>
                                     Programs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i>
+                            <li class="nav-item"><a class="nav-link" href="contact.php"><i class="fas fa-envelope"></i>
                                     Contact</a></li>
                             <li class="nav-item"><span class="theme-toggle nav-link" id="theme-toggle"><i
                                         class="fas fa-sun"></i> Theme</span></li>
@@ -912,7 +912,7 @@
             <h1>Citadel for Growth and Development</h1>
             <p>Transform your organization with cutting-edge training and strategic consultancy solutions tailored for
                 success.</p>
-            <a href="aboutus.html" class="btn btn-primary">Learn More</a>
+            <a href="aboutus.php" class="btn btn-primary">Learn More</a>
         </div>
     </section>
     <section class="service-highlights">
@@ -969,7 +969,7 @@
                         <p>Satisfaction Rate</p>
                     </div>
                 </div>
-                <a href="aboutus.html#whyus" class="btn btn-primary">Discover Our Impact</a>
+                <a href="aboutus.php#whyus" class="btn btn-primary">Discover Our Impact</a>
             </div>
         </div>
     </section>
