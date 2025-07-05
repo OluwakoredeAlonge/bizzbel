@@ -776,6 +776,13 @@
         }
 
     @media (max-width: 576px) {
+    .category-card {
+                height: 250px;
+                width:auto;
+            }
+              .category-title {
+                font-size: 1.2rem;
+            }
     .navbar {
         background-color: var(--primary-color);
         padding: 0.5rem 0; /* Reduce navbar padding to minimize overlap */
@@ -943,6 +950,7 @@
     <section class="services">
         <div class="container">
             <h2>Our Transformative Services</h2>
+            <input type="text" class="form-control mb-3" placeholder="Search services..." id="service-search" aria-label="Search services">
             <div class="categories-grid">
                 <a href="/services/instructor-led-learning" class="category-card">
                     <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
@@ -1178,6 +1186,22 @@
         });
         closeFooter.addEventListener('click', () => {
             footerDetailed.style.display = 'none';
+        });
+
+        // Search functionality for Transformative Services
+        const searchInput = document.getElementById('service-search');
+        const categoryCards = document.querySelectorAll('.category-card');
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            categoryCards.forEach(card => {
+                const title = card.querySelector('.category-title').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         });
     </script>
 </body>
