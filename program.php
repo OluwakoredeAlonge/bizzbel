@@ -748,46 +748,13 @@
     <section class="hero-banner">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="assets/logo.webp"
+                <a class="navbar-brand" href="index.php"><img src="assets/logo.webp"
                         alt="Bizzbel Data Intelligence Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvas"
-                    aria-labelledby="navbarOffcanvasLabel">
-                    <div class="offcanvas-header">
-                        <a class="offcanvas-title" id="navbarOffcanvasLabel" href="index.html"><img
-                                src="assets/logo.webp" alt="Bizzbel Data Intelligence Logo"></a>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i>
-                                    Home</a></li>
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#training" id="trainingDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-chalkboard-teacher"></i> Training
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="trainingDropdown">
-                                    <li><a class="dropdown-item" href="#">Instructor-led Programmes</a></li>
-                                    <li><a class="dropdown-item" href="#">International Study-Tours</a></li>
-                                    <li><a class="dropdown-item" href="#">Custom Training</a></li>
-                                </ul>
-                            </li> -->
-                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i
-                                        class="fas fa-info-circle"></i>
-                                    About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i>
-                                    Programs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i>
-                                    Contact</a></li>
-                            <li class="nav-item"><span class="theme-toggle nav-link" id="theme-toggle"><i
-                                        class="fas fa-sun"></i> Theme</span></li>
-                        </ul>
-                    </div>
-                </div>
+             <?php require_once('partials/navbar.php') ?>
             </div>
         </nav>
         <div class="hero-overlay"></div>
@@ -895,12 +862,7 @@
                         </div>
                         <div class="form-group">
                             <label for="service">Service <span style="color: #dc3545;">*</span></label>
-                            <select class="form-select" id="service" name="service" required>
-                                <option value="Instructor-led Learning Programmes" selected>Instructor-led Learning
-                                    Programmes</option>
-                                <option value="International Study-Tours">International Study-Tours</option>
-                                <option value="Custom Training">Custom Training</option>
-                            </select>
+                            <input type="text" class="form-control" id="service" name="service" readonly>
                         </div>
                     </form>
                 </div>

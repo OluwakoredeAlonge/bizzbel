@@ -616,21 +616,16 @@
             transition: background 0.3s, transform 0.3s;
         }
 
-        .newsletter-form button:hover {
+        .newsletter-form a:hover {
             background: linear-gradient(90deg, #008B5B, #00A86B);
             transform: scale(1.05);
         }
 
         .newsletter-form .unsubscribe-btn {
             background: none;
-            color: var(--accent-color);
+            color: red;
             text-decoration: underline;
             padding: 0.6rem 0;
-        }
-
-        .newsletter-form .unsubscribe-btn:hover {
-            color: #E6C200;
-            transform: none;
         }
 
         .close-btn {
@@ -873,46 +868,13 @@
     <section class="hero-banner">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="assets/logo.webp"
+                <a class="navbar-brand" href="index.php"><img src="assets/logo.webp"
                         alt="Bizzbel Data Intelligence Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvas"
-                    aria-labelledby="navbarOffcanvasLabel">
-                    <div class="offcanvas-header">
-                        <a class="offcanvas-title" id="navbarOffcanvasLabel" href="index.html"><img
-                                src="assets/logo.webp" alt="Bizzbel Data Intelligence Logo"></a>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i>
-                                    Home</a></li>
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#training" id="trainingDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fas fa-chalkboard-teacher"></i> Training
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="trainingDropdown">
-                                    <li><a class="dropdown-item" href="#">Instructor-led Programmes</a></li>
-                                    <li><a class="dropdown-item" href="#">International Study-Tours</a></li>
-                                    <li><a class="dropdown-item" href="#">Custom Training</a></li>
-                                </ul>
-                            </li> -->
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-info-circle"></i>
-                                    About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="program.html"><i
-                                        class="fas fa-graduation-cap"></i>
-                                    Programs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i>
-                                    Contact</a></li>
-                            <li class="nav-item"><span class="theme-toggle nav-link" id="theme-toggle"><i
-                                        class="fas fa-sun"></i> Theme</span></li>
-                        </ul>
-                    </div>
-                </div>
+              <?php require_once('partials/navbar.php') ?>
             </div>
         </nav>
         <div class="hero-overlay"></div>
@@ -1061,54 +1023,7 @@
             <a href="contact.html" class="btn btn-primary">Get in Touch</a>
         </div>
     </section>
-    <footer class="footer">
-        <div class="footer-simple container">
-            <p>© Bizzbel Data Intelligence 2025. | All Rights Reserved</p>
-            <a href="#" id="support-link">Support & Resources</a>
-        </div>
-        <div class="footer-detailed" id="footer-detailed">
-            <button class="close-btn" id="close-footer"><i class="fas fa-times"></i></button>
-            <div class="container">
-                <div>
-                    <h4>Contact Us</h4>
-                    <p>123 Innovation Hub, Lagos, Nigeria</p>
-                    <p>Phone: +234 123 456 7890</p>
-                    <p>Email: info@bizzbel.com</p>
-                </div>
-                <div>
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Whitepapers</a></li>
-                        <li><a href="#">Webinars</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Consultancy</a></li>
-                        <li><a href="#">Training Programmes</a></li>
-                        <li><a href="#">Study-Tours</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Follow Us</h4>
-                    <div class="social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <div class="newsletter-form">
-                        <input type="email" placeholder="Enter your email">
-                        <button>Subscribe</button>
-                        <button class="unsubscribe-btn">Unsubscribe</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php require_once('partials/footer.php'); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
