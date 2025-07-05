@@ -5,21 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Contact Bizzbel Data Intelligence for innovative training and data-driven consultancy services across Africa.">
+        content="Learn about Bizzbel Data Intelligence, a leading African firm dedicated to transformative training and data-driven consultancy for sustainable growth.">
     <meta name="keywords"
-        content="Bizzbel Data Intelligence, Contact Us, consultancy, training, Africa, data-driven solutions">
-    <title>Contact Us - Bizzbel Data Intelligence</title>
+        content="Bizzbel Data Intelligence, About Us, consultancy, training, Africa, data-driven solutions">
+    <title>About Us - Bizzbel Data Intelligence</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUh1gPqP5K0/4H0kB1O7M1gA6W2fD7xO8X8X9X9X9X9X9=="
-        crossorigin="anonymous">
     <style>
         :root {
             --primary-color: #003087;
+            --secondary-color: #00A86B;
             --background-color: #F5F7FA;
             --text-color: #333333;
             --white: #FFFFFF;
@@ -32,6 +30,7 @@
 
         [data-theme="dark"] {
             --primary-color: #4A90E2;
+            --secondary-color: #00C4B4;
             --background-color: #121212;
             --text-color: #E0E0E0;
             --white: #1E1E1E;
@@ -56,7 +55,6 @@
             padding: 0;
             background: linear-gradient(135deg, var(--background-color), #E6ECF4);
             line-height: 1.6;
-            box-sizing: border-box;
         }
 
         [data-theme="dark"] body {
@@ -225,6 +223,10 @@
         .section {
             padding: 5rem 0;
             text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+            animation-delay: 0.2s;
         }
 
         .section h2 {
@@ -232,7 +234,10 @@
             margin-bottom: 2.5rem;
         }
 
-        .contact-section {
+        .story,
+        .values,
+        .team,
+        .why-us {
             background: linear-gradient(145deg, var(--card-bg), var(--white));
             padding: 3.5rem;
             border-radius: 12px;
@@ -241,161 +246,242 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        [data-theme="dark"] .contact-section {
+        [data-theme="dark"] .story,
+        [data-theme="dark"] .values,
+        [data-theme="dark"] .team,
+        [data-theme="dark"] .why-us {
             background: linear-gradient(145deg, var(--card-bg), #2E2E2E);
         }
 
-        .contact-section:hover {
+        .story:hover,
+        .values:hover,
+        .team:hover,
+        .why-us:hover {
             transform: translateY(-8px);
             box-shadow: 0 10px 25px var(--shadow-color);
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-            min-height: 400px;
-            box-sizing: border-box;
+        .story p {
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-color);
         }
 
-        .contact-form-container,
-        .contact-info-container {
+        .story h3 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary-color);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+
+        .value-card {
             padding: 2rem;
             background: var(--white);
             border-radius: 10px;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
-            box-sizing: border-box;
         }
 
-        [data-theme="dark"] .contact-form-container,
-        [data-theme="dark"] .contact-info-container {
+        [data-theme="dark"] .value-card {
             background: #2E2E2E;
         }
 
-        .contact-form-container:hover,
-        .contact-info-container:hover {
+        .value-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 15px var(--shadow-color);
         }
 
-        .contact-form-container form {
+        .value-card i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .values-grid h3 {
+            font-size: 1.7rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .value-card p {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .why-us-item {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.5s ease;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .why-us-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        [data-theme="dark"] .why-us-item {
+            background: #2E2E2E;
+        }
+
+        .why-us-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px var(--shadow-color);
+        }
+
+        .why-us-item i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .why-us-item h3 {
+            font-size: 1.7rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .why-us-item p {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        .impact {
+            margin-top: 3rem;
+        }
+
+        .impact h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+        }
+
+        .impact-item {
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
-        .contact-form-container input,
-        .contact-form-container textarea {
-            padding: 1rem;
-            border: none;
-            border-bottom: 2px solid var(--text-color);
-            background-color: var(--background-color);
+        .impact-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .impact-item i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .impact-item h3 {
+            font-size: 2.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .impact-item p {
+            font-size: 1rem;
             color: var(--text-color);
-            font-size: 1.1rem;
-            width: 100%;
-            box-sizing: border-box;
-            transition: border-bottom-color 0.3s ease, background-color 0.3s ease;
         }
 
-        .contact-form-container input:focus,
-        .contact-form-container textarea:focus {
-            outline: none;
-            border-bottom-color: var(--accent-color);
-            background-color: var(--white);
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
         }
 
-        [data-theme="dark"] .contact-form-container input,
-        [data-theme="dark"] .contact-form-container textarea {
-            background-color: #3A3A3A;
-            border-bottom-color: var(--text-color);
+        .team-member {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        [data-theme="dark"] .contact-form-container input:focus,
-        [data-theme="dark"] .contact-form-container textarea:focus {
-            background-color: #4A4A4A;
-            border-bottom-color: var(--accent-color);
+        [data-theme="dark"] .team-member {
+            background: #2E2E2E;
         }
 
-        .contact-form-container textarea {
-            resize: vertical;
-            min-height: 150px;
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px var(--shadow-color);
         }
 
-        .contact-form-container button {
-            background: var(--primary-color);
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: block;
+        }
+
+        .team-member h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        .btn {
+            background: linear-gradient(90deg, var(--secondary-color), #00C4B4);
             color: var(--white);
-            padding: 1rem;
-            border: none;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 1.1rem;
-            cursor: pointer;
+            display: inline-block;
             transition: background 0.4s, transform 0.4s, box-shadow 0.4s;
         }
 
-        .contact-form-container button:hover {
-            background: var(--accent-color);
-            color: var(--text-color);
+        .btn:hover {
+            background: linear-gradient(90deg, #008B5B, #00A86B);
             transform: scale(1.05);
             box-shadow: 0 4px 15px var(--shadow-color);
         }
 
-        .form-message {
-            margin-top: 1rem;
-            padding: 1rem;
-            border-radius: 5px;
-            display: none;
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--background-color), var(--white));
+            text-align: center;
         }
 
-        .form-message.success {
-            background-color: var(--primary-color);
-            color: var(--white);
+        [data-theme="dark"] .cta-section {
+            background: linear-gradient(135deg, var(--background-color), #2E2E2E);
         }
 
-        .form-message.error {
-            background-color: #ff4d4d;
-            color: var(--white);
-        }
-
-        .contact-info-container h3 {
-            font-size: 1.7rem;
+        .cta-section h2 {
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
         }
 
-        .contact-info-container p {
-            font-size: 1rem;
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.2rem;
             color: var(--text-color);
-            margin-bottom: 1rem;
-        }
-
-        .contact-info-container .social {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .contact-info-container .social a {
-            font-size: 2rem;
-            color: var(--primary-color);
-            transition: color 0.3s;
-        }
-
-        .contact-info-container .social a:hover {
-            color: var(--accent-color);
-        }
-
-        .map-container {
-            margin-top: 2rem;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px var(--shadow-color);
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
         }
 
         .footer {
@@ -517,7 +603,7 @@
 
         .newsletter-form button {
             padding: 0.6rem 1.2rem;
-            background: var(--primary-color);
+            background: linear-gradient(90deg, var(--secondary-color), #00C4B4);
             color: var(--white);
             border: none;
             border-radius: 5px;
@@ -527,8 +613,7 @@
         }
 
         .newsletter-form button:hover {
-            background: var(--accent-color);
-            color: var(--text-color);
+            background: linear-gradient(90deg, #008B5B, #00A86B);
             transform: scale(1.05);
         }
 
@@ -597,71 +682,108 @@
                 font-size: 2.2rem;
             }
 
-            .contact-section {
-                padding: 2rem;
-                margin: 0;
-                border-radius: 0;
-                box-shadow: none;
+            .story,
+            .values,
+            .team,
+            .why-us {
+                padding: 2.5rem;
             }
 
-            .contact-grid {
+            /* Specific styles for Why Us section */
+            .why-us-grid {
+                display: grid;
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
-                min-height: auto;
             }
 
-            .contact-form-container,
-            .contact-info-container {
-                width: 100%;
-                margin: 0 -1rem;
-                padding: 2rem;
-                border-radius: 0;
-                box-shadow: 0 2px 8px var(--shadow-color);
-                min-height: auto;
+            .why-us-item {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+                padding: 1.5rem;
+                background: var(--white);
+                border-radius: 8px;
+                text-align: center;
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
             }
 
-            .contact-form-container form {
-                gap: 1.2rem;
+            [data-theme="dark"] .why-us-item {
+                background: #2E2E2E;
             }
 
-            .contact-form-container input,
-            .contact-form-container textarea {
-                padding: 1rem;
-                font-size: 1.1rem;
+            .why-us-item h3 {
+                font-size: 1.4rem;
+                margin-bottom: 0.5rem;
             }
 
-            .contact-form-container button {
-                padding: 1rem;
-                font-size: 1.1rem;
+            .why-us-item p {
+                font-size: 0.9rem;
             }
 
-            .contact-info-container h3 {
-                font-size: 1.6rem;
+            .why-us-item i {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
             }
 
-            .contact-info-container p {
-                font-size: 1.1rem;
+            .why-us-item.animate {
+                opacity: 1;
+                transform: translateY(0);
             }
 
-            .contact-info-container .social {
-                gap: 1.8rem;
+            /* Specific styles for Values section */
+            .values-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
 
-            .contact-info-container .social a {
-                font-size: 1.8rem;
+            .value-card {
+                display: block;
+                padding: 1.5rem;
+                background: var(--white);
+                border-radius: 8px;
+                text-align: center;
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
             }
 
-            .map-container iframe {
-                height: 250px;
+            [data-theme="dark"] .value-card {
+                background: #2E2E2E;
+            }
+
+            .value-card h3 {
+                font-size: 1.4rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .value-card p {
+                font-size: 0.9rem;
+            }
+
+            .value-card i {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .team-grid,
+            .impact-grid {
+                grid-template-columns: 1fr;
             }
 
             .footer-detailed .container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
             }
 
-            .newsletter-form {
+            .footer-simple {
                 flex-direction: column;
-                align-items: flex-start;
+                gap: 0.5rem;
+                align-items: center;
+            }
+
+            .footer-simple p,
+            .footer-simple a {
+                width: 100%;
+                text-align: center;
+                margin: 0;
             }
         }
 
@@ -689,37 +811,8 @@
                 line-height: 1.4;
             }
 
-            .contact-section {
-                padding: 1.5rem 0;
-                margin: 0;
-            }
-
-            .contact-form-container,
-            .contact-info-container {
-                padding: 1.5rem;
-                margin: 0 -0.5rem;
-                box-shadow: 0 2px 6px var(--shadow-color);
-            }
-
-            .contact-form-container input,
-            .contact-form-container textarea {
-                font-size: 1rem;
-            }
-
-            .contact-form-container button {
-                font-size: 1rem;
-            }
-
-            .contact-info-container h3 {
-                font-size: 1.4rem;
-            }
-
-            .contact-info-container p {
-                font-size: 1rem;
-            }
-
-            .contact-info-container .social a {
-                font-size: 1.5rem;
+            .impact-grid {
+                grid-template-columns: 1fr;
             }
 
             .footer-detailed .container {
@@ -737,6 +830,36 @@
                 width: 100%;
                 text-align: center;
                 margin: 0;
+            }
+
+            .story p {
+                font-size: 1rem;
+            }
+
+            .value-card h3,
+            .team-member h3 {
+                font-size: 1.4rem;
+            }
+
+            .impact-item h3 {
+                font-size: 1.8rem;
+            }
+
+            .impact-item i {
+                font-size: 2.5rem;
+            }
+
+            .team-member img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .why-us-item h3 {
+                font-size: 1.4rem;
+            }
+
+            .why-us-item i {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -759,7 +882,7 @@
                                 src="assets/logo.webp" alt="Bizzbel Data Intelligence Logo"></a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                  <div class="offcanvas-body">
+                    <div class="offcanvas-body">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i>
                                     Home</a></li>
@@ -774,11 +897,12 @@
                                     <li><a class="dropdown-item" href="#">Custom Training</a></li>
                                 </ul>
                             </li> -->
-                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fas fa-info-circle"></i>
+                            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-info-circle"></i>
                                     About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="program.html"><i class="fas fa-graduation-cap"></i></i>
+                            <li class="nav-item"><a class="nav-link" href="program.html"><i
+                                        class="fas fa-graduation-cap"></i>
                                     Programs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope"></i>
+                            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i>
                                     Contact</a></li>
                             <li class="nav-item"><span class="theme-toggle nav-link" id="theme-toggle"><i
                                         class="fas fa-sun"></i> Theme</span></li>
@@ -789,45 +913,148 @@
         </nav>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Get in Touch with Bizzbel Data Intelligence</h1>
-            <p>We're here to help you unlock your organization's potential with tailored training and consultancy
-                solutions.</p>
+            <h1>Empowering Africa's Future Through Knowledge and Strategy</h1>
+            <p>Discover how Bizzbel Data Intelligence drives transformative growth with innovative training and
+                consultancy.</p>
         </div>
     </section>
-    <section class="section contact-section">
+    <section class="section story" id="story">
         <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-grid">
-                <div class="contact-form-container" data-aos="fade-up" data-aos-offset="100">
-                    <form id="contact-form" action="contactus.html" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
-                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
-                        <input type="text" name="subject" placeholder="Subject" aria-label="Subject">
-                        <textarea name="message" placeholder="Your Message" required
-                            aria-label="Your Message"></textarea>
-                        <input type="text" name="honeypot" style="display: none;" aria-hidden="true">
-                        <button type="submit">Send Message</button>
-                    </form>
-                    <div class="form-message" id="form-message"></div>
+            <h2>Our Story</h2>
+            <p>Founded in 1993, Bizzbel Data Intelligence emerged to bridge the knowledge gap in African organizations,
+                equipping them with the skills and strategies needed to thrive in a global economy. Our mission is to
+                empower organizations and individuals with cutting-edge training and data-driven consultancy for
+                sustainable growth.</p>
+            <p>With a vision to be Africa’s premier partner in fostering innovation, inclusion, and competitiveness,
+                we’ve grown to serve over 25 countries, partnering with global leaders to deliver impactful solutions.
+            </p>
+            <h3>Our Approach</h3>
+            <p>At Bizzbel, we combine global best practices with localized expertise to deliver tailored solutions. Our
+                process begins with a thorough assessment of your needs, followed by designing customized training or
+                consultancy programs. We deliver with precision and evaluate outcomes to ensure lasting impact.</p>
+            <p>Our data-driven approach, backed by advanced analytics and global partnerships, sets us apart in
+                fostering sustainable growth and organizational excellence.</p>
+        </div>
+    </section>
+    <section class="section values">
+        <div class="container">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>We leverage cutting-edge technologies and methodologies to deliver transformative solutions.</p>
                 </div>
-                <div class="contact-info-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="200">
-                    <h3>Our Contact Details</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Innovation Hub, Lagos, Nigeria</p>
-                    <p><i class="fas fa-phone"></i> +234 123 456 7890</p>
-                    <p><i class="fas fa-envelope"></i> info@bizzbel.com</p>
-                    <div class="social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <div class="value-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Integrity</h3>
+                    <p>We uphold honesty and transparency in every partnership and project we undertake.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Inclusion</h3>
+                    <p>We champion diversity and ensure our solutions empower all communities.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Excellence</h3>
+                    <p>We strive for the highest standards in training and consultancy delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section why-us" id="whyus">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <p>At Bizzbel Data Intelligence, we stand out through our commitment to innovation, integrity, and
+                excellence. Our unique blend of global expertise and local insights allows us to deliver tailored
+                solutions that drive real results. Here’s why organizations across Africa choose us:</p>
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Customized Training and Consultancy</h3>
+                    <p>Tailored programs to meet your specific organizational needs.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Data-Driven Solutions</h3>
+                    <p>Leveraging advanced analytics to deliver actionable insights.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-globe-africa"></i>
+                    <h3>Global Expertise, Local Impact</h3>
+                    <p>Combining international best practices with deep understanding of African markets.</p>
+                </div>
+                <div class="why-us-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Proven Success</h3>
+                    <p>Over 30 years of empowering organizations across Africa.</p>
+                </div>
+            </div>
+            <div class="impact">
+                <h3>Our Impact</h3>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <i class="fas fa-users"></i>
+                        <h3>15,000+</h3>
+                        <p>Participants Trained</p>
                     </div>
-                    <div class="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d3.3752957!3d6.5274063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae682ca7d%3A0x4b8b2a3b7b8b2b!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v16987654321!5m2!1sen!2sng"
-                            allowfullscreen="" loading="lazy"></iframe>
+                    <div class="impact-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>32</h3>
+                        <p>Years of Talent Development</p>
+                    </div>
+                    <div class="impact-item">
+                        <i class="fas fa-globe"></i>
+                        <h3>25</h3>
+                        <p>Countries Reached</p>
+                    </div>
+                    <div class="impact-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>82%</h3>
+                        <p>Satisfaction Rate</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="section team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="Dr. Amina Bello">
+                    <h3>Dr. Amina Bello</h3>
+                    <p>CEO & Founder</p>
+                    <p>With over 20 years of experience in strategic consultancy, Dr. Bello leads Bizzbel with a passion
+                        for transformative growth.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="James Okoye">
+                    <h3>James Okoye</h3>
+                    <p>Head of Training</p>
+                    <p>James designs innovative training programs, drawing on his expertise in global education trends.
+                    </p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                        alt="Sarah Mwangi">
+                    <h3>Sarah Mwangi</h3>
+                    <p>Chief Consultant</p>
+                    <p>Sarah drives data-driven solutions, helping clients achieve measurable results across industries.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Organization?</h2>
+            <p>Contact us today to explore how Bizzbel Data Intelligence can empower your team with innovative training
+                and strategic consultancy.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
         </div>
     </section>
     <footer class="footer">
@@ -881,17 +1108,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-        crossorigin="anonymous"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 600,
-            easing: 'ease-out',
-            once: true
-        });
-
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
@@ -912,6 +1129,38 @@
             setTheme(currentTheme === 'light' ? 'dark' : 'light');
         });
 
+        // Impact animation
+        const impactObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const impactItems = document.querySelectorAll('.impact-item');
+                    impactItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('animate');
+                        }, index * 200);
+                    });
+                    impactObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        impactObserver.observe(document.querySelector('.impact'));
+
+        // Why Us animation
+        const whyUsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const whyUsItems = document.querySelectorAll('.why-us-item');
+                    whyUsItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('animate');
+                        }, index * 200);
+                    });
+                    whyUsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        whyUsObserver.observe(document.querySelector('.why-us'));
+
         // Footer toggle
         const supportLink = document.getElementById('support-link');
         const footerDetailed = document.getElementById('footer-detailed');
@@ -922,77 +1171,6 @@
         });
         closeFooter.addEventListener('click', () => {
             footerDetailed.style.display = 'none';
-        });
-
-        // Form validation and submission
-        const contactForm = document.getElementById('contact-form');
-        const formMessage = document.getElementById('form-message');
-
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(contactForm);
-            const honeypot = formData.get('honeypot');
-
-            if (honeypot !== '') {
-                // Bot detected, ignore submission
-                return;
-            }
-
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
-
-            // Basic client-side validation
-            if (!name || !email || !message) {
-                formMessage.classList.add('error');
-                formMessage.textContent = 'Please fill in all required fields.';
-                formMessage.style.display = 'block';
-                setTimeout(() => {
-                    formMessage.style.display = 'none';
-                    formMessage.classList.remove('error');
-                }, 3000);
-                return;
-            }
-
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                formMessage.classList.add('error');
-                formMessage.textContent = 'Please enter a valid email address.';
-                formMessage.style.display = 'block';
-                setTimeout(() => {
-                    formMessage.style.display = 'none';
-                    formMessage.classList.remove('error');
-                }, 3000);
-                return;
-            }
-
-            // Submit form via fetch
-            fetch('contactus.html', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    formMessage.classList.add(data.status);
-                    formMessage.textContent = data.message;
-                    formMessage.style.display = 'block';
-                    if (data.status === 'success') {
-                        contactForm.reset();
-                    }
-                    setTimeout(() => {
-                        formMessage.style.display = 'none';
-                        formMessage.classList.remove(data.status);
-                    }, 3000);
-                })
-                .catch(error => {
-                    formMessage.classList.add('error');
-                    formMessage.textContent = 'An error occurred. Please try again later.';
-                    formMessage.style.display = 'block';
-                    setTimeout(() => {
-                        formMessage.style.display = 'none';
-                        formMessage.classList.remove('error');
-                    }, 3000);
-                });
         });
     </script>
 </body>

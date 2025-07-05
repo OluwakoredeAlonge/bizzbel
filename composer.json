@@ -1,0 +1,20 @@
+{
+  "name": "admin/bizzbel",
+  "description": "Backend for Bizzbel data intelligence app",
+  "type": "project",
+  "require": {
+    "phpmailer/phpmailer": "^6.10"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Korede Alonge",
+      "email": "koredealonge38@gmail.com"
+    }
+  ]
+}

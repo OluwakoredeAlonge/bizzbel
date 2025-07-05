@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Bizzbel Data Intelligence's Instructor-led Learning Programmes, designed for practical skill enhancement and professional growth.">
-    <meta name="keywords" content="Bizzbel Data Intelligence, Instructor-led Learning, training, professional development, Africa">
+    <meta name="description"
+        content="Explore Bizzbel Data Intelligence's Instructor-led Learning Programmes, designed for practical skill enhancement and professional growth.">
+    <meta name="keywords"
+        content="Bizzbel Data Intelligence, Instructor-led Learning, training, professional development, Africa">
     <title>Instructor-led Learning Programmes - Bizzbel Data Intelligence</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUh1gPqP5K0/4H0kB1O7M1gA6W2fD7xO8X8X9X9X9X9X9==" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUh1gPqP5K0/4H0kB1O7M1gA6W2fD7xO8X8X9X9X9X9X9=="
+        crossorigin="anonymous">
     <style>
         :root {
             --primary-color: #003087;
@@ -35,7 +42,8 @@
             --shadow-color: rgba(255, 255, 255, 0.2);
         }
 
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             height: 100%;
             transition: background-color 0.3s ease, color 0.3s ease;
@@ -54,7 +62,10 @@
             background: linear-gradient(135deg, var(--background-color), #2E2E2E);
         }
 
-        h1, h2, h3, h5 {
+        h1,
+        h2,
+        h3,
+        h5 {
             font-family: 'Montserrat', sans-serif;
             color: var(--primary-color);
         }
@@ -719,7 +730,8 @@
                 align-items: center;
             }
 
-            .footer-simple p, .footer-simple a {
+            .footer-simple p,
+            .footer-simple a {
                 width: 100%;
                 text-align: center;
                 margin: 0;
@@ -727,17 +739,22 @@
         }
     </style>
 </head>
+
 <body data-theme="light">
     <section class="hero-banner">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="assets/logo.webp" alt="Bizzbel Data Intelligence Logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="index.html"><img src="assets/logo.webp"
+                        alt="Bizzbel Data Intelligence Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvas"
+                    aria-labelledby="navbarOffcanvasLabel">
                     <div class="offcanvas-header">
-                        <a class="offcanvas-title" id="navbarOffcanvasLabel" href="index.html"><img src="assets/logo.webp" alt="Bizzbel Data Intelligence Logo"></a>
+                        <a class="offcanvas-title" id="navbarOffcanvasLabel" href="index.html"><img
+                                src="assets/logo.webp" alt="Bizzbel Data Intelligence Logo"></a>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
@@ -755,7 +772,8 @@
                                     <li><a class="dropdown-item" href="#">Custom Training</a></li>
                                 </ul>
                             </li> -->
-                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fas fa-info-circle"></i>
+                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i
+                                        class="fas fa-info-circle"></i>
                                     About</a></li>
                             <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i>
                                     Programs</a></li>
@@ -771,7 +789,11 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Instructor-led Learning Programmes</h1>
-            <p>Our Instructor-led Learning Programmes are crafted to deliver hands-on experience and practical skills that participants can immediately apply in their professional roles. These sessions, guided by industry experts, offer a comprehensive curriculum tailored to address the evolving needs of professionals across various industries. Whether you're looking to upskill, pivot your career, or enhance your expertise, this programme provides a dynamic and engaging learning environment.</p>
+            <p>Our Instructor-led Learning Programmes are crafted to deliver hands-on experience and practical skills
+                that participants can immediately apply in their professional roles. These sessions, guided by industry
+                experts, offer a comprehensive curriculum tailored to address the evolving needs of professionals across
+                various industries. Whether you're looking to upskill, pivot your career, or enhance your expertise,
+                this programme provides a dynamic and engaging learning environment.</p>
         </div>
     </section>
 
@@ -780,11 +802,15 @@
             <div class="col-lg-6 mb-4">
                 <section class="section content-section" data-aos="fade-up">
                     <h2>Why You Should Attend</h2>
-                    <p>Participating in our training programmes offers a range of advantages to support your professional development:</p>
+                    <p>Participating in our training programmes offers a range of advantages to support your
+                        professional development:</p>
                     <ul>
-                        <li>Learn directly from seasoned instructors with deep industry knowledge and practical experience.</li>
-                        <li>Engage in interactive, hands-on sessions that foster active learning and skill application.</li>
-                        <li>Build valuable connections with peers and industry professionals during collaborative activities.</li>
+                        <li>Learn directly from seasoned instructors with deep industry knowledge and practical
+                            experience.</li>
+                        <li>Engage in interactive, hands-on sessions that foster active learning and skill application.
+                        </li>
+                        <li>Build valuable connections with peers and industry professionals during collaborative
+                            activities.</li>
                         <li>Receive tailored feedback and insights to refine your skills and boost your confidence.</li>
                     </ul>
                 </section>
@@ -795,7 +821,8 @@
                     <p>This programme equips you with essential skills and knowledge, including:</p>
                     <ul>
                         <li>Advanced methods for analyzing and interpreting data to drive informed decisions.</li>
-                        <li>Proven strategies to lead teams effectively and manage complex projects with confidence.</li>
+                        <li>Proven strategies to lead teams effectively and manage complex projects with confidence.
+                        </li>
                         <li>Best practices for planning, executing, and delivering successful projects on time.</li>
                         <li>Creative techniques to tackle challenges and make strategic, impactful decisions.</li>
                     </ul>
@@ -806,7 +833,8 @@
                     <h2>Who Should Attend</h2>
                     <p>This programme is ideal for a diverse range of professionals, such as:</p>
                     <ul>
-                        <li>Mid-level managers eager to sharpen their leadership abilities and advance their careers.</li>
+                        <li>Mid-level managers eager to sharpen their leadership abilities and advance their careers.
+                        </li>
                         <li>HR professionals focused on developing innovative talent management strategies.</li>
                         <li>Data analysts seeking to transform data into actionable business insights.</li>
                         <li>Entrepreneurs and business owners aiming to grow and optimize their operations.</li>
@@ -819,8 +847,10 @@
     <section class="cta-section" data-aos="fade-up" data-aos-delay="400">
         <div class="container">
             <h2>Ready to Elevate Your Skills?</h2>
-            <p>Contact us today to register for our Instructor-led Learning Programmes and take the next step toward professional excellence.</p>
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#registerModal" aria-label="Register for Instructor-led Learning Programmes">Register Now</button>
+            <p>Contact us today to register for our Instructor-led Learning Programmes and take the next step toward
+                professional excellence.</p>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#registerModal"
+                aria-label="Register for Instructor-led Learning Programmes">Register Now</button>
         </div>
     </section>
 
@@ -836,28 +866,34 @@
                     <form id="registrationForm">
                         <div class="form-group">
                             <label for="fullName">Full Name <span style="color: #dc3545;">*</span></label>
-                            <input type="text" class="form-control" id="fullName" name="fullName" required placeholder="Enter your full name">
+                            <input type="text" class="form-control" id="fullName" name="fullName" required
+                                placeholder="Enter your full name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address <span style="color: #dc3545;">*</span></label>
-                            <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+                            <input type="email" class="form-control" id="email" name="email" required
+                                placeholder="Enter your email">
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number <span style="color: #dc3545;">*</span></label>
-                            <input type="tel" class="form-control" id="phone" name="phone" required placeholder="Enter your phone number">
+                            <input type="tel" class="form-control" id="phone" name="phone" required
+                                placeholder="Enter your phone number">
                         </div>
                         <div class="form-group">
                             <label for="jobTitle">Job Title</label>
-                            <input type="text" class="form-control" id="jobTitle" name="jobTitle" placeholder="Enter your job title">
+                            <input type="text" class="form-control" id="jobTitle" name="jobTitle"
+                                placeholder="Enter your job title">
                         </div>
                         <div class="form-group">
                             <label for="company">Company Name</label>
-                            <input type="text" class="form-control" id="company" name="company" placeholder="Enter your company name">
+                            <input type="text" class="form-control" id="company" name="company"
+                                placeholder="Enter your company name">
                         </div>
                         <div class="form-group">
                             <label for="service">Service <span style="color: #dc3545;">*</span></label>
                             <select class="form-select" id="service" name="service" required>
-                                <option value="Instructor-led Learning Programmes" selected>Instructor-led Learning Programmes</option>
+                                <option value="Instructor-led Learning Programmes" selected>Instructor-led Learning
+                                    Programmes</option>
                                 <option value="International Study-Tours">International Study-Tours</option>
                                 <option value="Custom Training">Custom Training</option>
                             </select>
@@ -921,8 +957,12 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous"></script>
     <script>
         AOS.init({
             duration: 600,
@@ -979,4 +1019,5 @@
         });
     </script>
 </body>
+
 </html>

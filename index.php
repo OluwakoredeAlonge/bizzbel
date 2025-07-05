@@ -775,64 +775,84 @@
             }
         }
 
-    @media (max-width: 576px) {
-    .category-card {
+        @media (max-width: 576px) {
+            .category-card {
                 height: 250px;
-                width:auto;
+                width: auto;
             }
-              .category-title {
+
+            .category-title {
                 font-size: 1.2rem;
             }
-    .navbar {
-        background-color: var(--primary-color);
-        padding: 0.5rem 0; /* Reduce navbar padding to minimize overlap */
-    }
-    .navbar-brand img {
-        width: 80px;
-    }
-    .offcanvas-title img {
-        width: 100px;
-    }
-    .categories-grid {
-        grid-template-columns: 1fr;
-    }
-    .hero-banner {
-        height: 400px;
-        display: flex;
-        align-items: center; /* Ensure vertical centering */
-    }
-    .hero-content {
-        padding: 4.5rem 1rem 1rem; /* Increase top padding to clear navbar */
-        max-width: 90%; /* Prevent text clipping */
-        text-align: center;
-    }
-    .hero-content h1 {
-        font-size: 1.8rem; /* Slightly smaller than 2rem for better fit */
-        line-height: 1.2; /* Improve readability */
-        margin-bottom: 0.8rem;
-    }
-    .hero-content p {
-        font-size: 0.9rem; /* Adjust for smaller screens */
-    }
-    .hero-content .btn {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-    }
-    .footer-detailed .container {
-        grid-template-columns: 1fr;
-    }
-    .footer-simple {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-    }
-    .footer-simple p,
-    .footer-simple a {
-        width: 100%;
-        text-align: center;
-        margin: 0;
-    }
-}
+
+            .navbar {
+                background-color: var(--primary-color);
+                padding: 0.5rem 0;
+                /* Reduce navbar padding to minimize overlap */
+            }
+
+            .navbar-brand img {
+                width: 80px;
+            }
+
+            .offcanvas-title img {
+                width: 100px;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-banner {
+                height: 400px;
+                display: flex;
+                align-items: center;
+                /* Ensure vertical centering */
+            }
+
+            .hero-content {
+                padding: 4.5rem 1rem 1rem;
+                /* Increase top padding to clear navbar */
+                max-width: 90%;
+                /* Prevent text clipping */
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+                /* Slightly smaller than 2rem for better fit */
+                line-height: 1.2;
+                /* Improve readability */
+                margin-bottom: 0.8rem;
+            }
+
+            .hero-content p {
+                font-size: 0.9rem;
+                /* Adjust for smaller screens */
+            }
+
+            .hero-content .btn {
+                font-size: 0.9rem;
+                padding: 0.6rem 1.2rem;
+            }
+
+            .footer-detailed .container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-simple {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+            }
+
+            .footer-simple p,
+            .footer-simple a {
+                width: 100%;
+                text-align: center;
+                margin: 0;
+            }
+        }
     </style>
 </head>
 
@@ -868,9 +888,11 @@
                                     <li><a class="dropdown-item" href="#">Custom Training</a></li>
                                 </ul>
                             </li> -->
-                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fas fa-info-circle"></i>
+                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i
+                                        class="fas fa-info-circle"></i>
                                     About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="program.html"><i class="fas fa-graduation-cap"></i>
+                            <li class="nav-item"><a class="nav-link" href="program.html"><i
+                                        class="fas fa-graduation-cap"></i>
                                     Programs</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i>
                                     Contact</a></li>
@@ -950,7 +972,8 @@
     <section class="services">
         <div class="container">
             <h2>Our Transformative Services</h2>
-            <input type="text" class="form-control mb-3" placeholder="Search services..." id="service-search" aria-label="Search services">
+            <input type="text" class="form-control mb-3" placeholder="Search services..." id="service-search"
+                aria-label="Search services">
             <div class="categories-grid">
                 <a href="/services/instructor-led-learning" class="category-card">
                     <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
@@ -963,17 +986,17 @@
                     <div class="category-title">International Study-Tour Programmes</div>
                 </a>
                 <a href="/services/custom-training" class="category-card">
-                   <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
                         alt="International Study-Tour Programmes">
                     <div class="category-title">Custom Training Programmes</div>
                 </a>
                 <a href="/services/data-driven-consulting" class="category-card">
-                   <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
                         alt="International Study-Tour Programmes">
                     <div class="category-title">Data-Driven Consulting</div>
                 </a>
                 <a href="/services/organizational-development" class="category-card">
-                     <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
                         alt="International Study-Tour Programmes">
                     <div class="category-title">Organizational Development Consulting</div>
                 </a>
@@ -993,7 +1016,7 @@
                     <div class="category-title">Innovation Workshops</div>
                 </a>
                 <a href="/services/leadership-development" class="category-card">
-                   <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
                         alt="International Study-Tour Programmes">
                     <div class="category-title">Leadership Development</div>
                 </a>
@@ -1008,13 +1031,14 @@
             </div>
         </div>
     </section>
-   <section class="consultancy">
-    <div class="container">
-        <h2>Empowering Business Transformation</h2>
-        <p>Our expert consultants deliver data-driven strategies and innovative solutions to address complex challenges, fostering sustainable growth and organizational excellence across diverse industries.</p>
-        <a href="#" class="btn btn-primary">Explore Transformation Solutions</a>
-    </div>
-</section>
+    <section class="consultancy">
+        <div class="container">
+            <h2>Empowering Business Transformation</h2>
+            <p>Our expert consultants deliver data-driven strategies and innovative solutions to address complex
+                challenges, fostering sustainable growth and organizational excellence across diverse industries.</p>
+            <a href="#" class="btn btn-primary">Explore Transformation Solutions</a>
+        </div>
+    </section>
     <section class="clients">
         <div class="container">
             <h2>Trusted by Global Leaders</h2>
@@ -1024,8 +1048,7 @@
                         <img src="assets/CSDALogo.png" alt="World Bank Logo">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/IBSLogo.png"
-                            alt="African Development Bank Logo">
+                        <img src="assets/IBSLogo.png" alt="African Development Bank Logo">
                     </div>
                     <!-- <div class="carousel-item">
                         <img src="assets/NG-Cares.jpg"
